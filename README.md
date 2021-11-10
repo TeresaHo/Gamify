@@ -2,20 +2,8 @@
 
 ## Short Description of Project
 
-This project aims at creating a hub of four different games which is meant to bring people together online. Players login with their Spotify accounts, and are redirected to a welcome page. There, they can either create their own room or join an existing room. In a room, they can invite their friends to play one of four different music-related quiz games, some of which use Spotify to play audio tracks or retrieve personal information from Spotify about the user (with their consent, of course).
+This project aims at creating a hub of two different games which is meant to bring people together online. Players login with their Spotify accounts, and are redirected to a welcome page. There, they can either create their own room or join an existing room. In a room, they can invite their friends to play one of two different music-related quiz games, some of which use Spotify to play audio tracks or retrieve personal information from Spotify about the user (with their consent, of course).
 
-## What We Have Done
-
-- Login view, where a user can sign in using their Spotify account (not completely finished it), after which they're re-directed to:
-- Welcome view, where a user can create their own room, or type in a room ID and join an existing room.
-- Lobby view, which is the room's lobby. Here, users can see who else is in the room and there are 4 game options that the host of the room can select for the users in the room to play.
-- Results view, the end of a game, where the player's results are shown in a descending order.
-- Game view for the Music Quiz Game, where users can select one of 4 answers to a question which is displayed at the top.
-- We have also created a model/backend with a database in firebase for data persistence. We also implemented calls to Spotify via their API to authenticate a user. Furthermore, we integrated the views with the model via presenters (using the MVP-model).
-
-## What Else We Intend To Do
-
-We intend to finish the implementation of our first game, the Music Quiz Game. After that, we will implement three more music-related games. one of which is "Do You Know Me?" where players get to answer questions about each other's music tastes (data will be retrieved from Spotify playlists/most liked songs etc) and a couple of other games.
 
 ## Project File Structure
 
@@ -25,7 +13,7 @@ We intend to finish the implementation of our first game, the Music Quiz Game. A
 - gamify/\_: setup code, gitignore, eslint & prettier for correct code styling. Config files.
 
 * src/api/opentriviadb/opentriviadb.js: contains api calls to opentriviadb (which returns a question and 4 possible answers, one of which is correct. Used in the Music Quiz Game. also contains api
-* api/spotify/spotify.js: contains api calls to spotify, currently only to authenticate the user. Will expand to also include retrieving information about user music tastes (most played songs, playlists etc) or whatever is necessary for the other games.
+* api/spotify/spotify.js: contains api calls to spotify
 
 * src/app/app.jsx: the app itself, where routing is done etc.
 * app/showPresenter.jsx: Used in app.jsx to show hashes correctly etc.
